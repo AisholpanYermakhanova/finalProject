@@ -1,0 +1,20 @@
+package Animation;
+
+import javafx.animation.TranslateTransition;
+import javafx.util.Duration;
+
+import javafx.scene.Node;
+
+public class Shake {
+    private TranslateTransition translateTransition;
+    public Shake(Node node){
+        translateTransition=new TranslateTransition(Duration.millis(80), node);
+        translateTransition.setFromX(0f);
+        translateTransition.setByX(10f);
+        translateTransition.setCycleCount(3);
+        translateTransition.setAutoReverse(true);
+    }
+    public void PlayAnimation(){
+        translateTransition.playFromStart();
+    }
+}

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="647.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ForgetPage">
+   <children>
+      <ImageView fitHeight="421.0" fitWidth="400.0" layoutX="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pictures/1.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="290.0" prefHeight="400.0" prefWidth="357.0" style="-fx-background-color: #8b5100;">
+         <children>
+            <AnchorPane layoutX="25.0" layoutY="20.0" prefHeight="359.0" prefWidth="308.0" style="-fx-background-color: white;">
+               <children>
+                  <Label fx:id="labelFpass" layoutX="99.0" layoutY="276.0" text="&lt;&lt; password">
+                     <font>
+                        <Font name="System Italic" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelFans" layoutX="78.0" layoutY="203.0" text="&lt;&lt; your answer">
+                     <font>
+                        <Font name="System Italic" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelFques" layoutX="19.0" layoutY="167.0" text="&lt;&lt; verification question">
+                     <font>
+                        <Font name="System Italic" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelFlog" layoutX="91.0" layoutY="99.0" text="&lt;&lt; your login">
+                     <font>
+                        <Font name="System Italic" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelFoget" layoutX="70.0" layoutY="38.0" text="You forget your password?">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="textFlog" layoutX="66.0" layoutY="116.0" prefHeight="25.0" prefWidth="214.0" />
+      <TextField fx:id="textFans" layoutX="66.0" layoutY="225.0" prefHeight="25.0" prefWidth="214.0" />
+      <TextField fx:id="textFpass" layoutX="66.0" layoutY="300.0" prefHeight="25.0" prefWidth="214.0" />
+      <Button fx:id="buttonFget" layoutX="147.0" layoutY="150.0" mnemonicParsing="false" prefHeight="14.0" prefWidth="41.0" text="get">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonFcheck" layoutX="143.0" layoutY="258.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="59.0" text="check">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonFback" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="41.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIcon glyphName="ARROW_LEFT" />
+         </graphic>
+      </Button>
+      <Label fx:id="textFque" alignment="CENTER" layoutX="66.0" layoutY="187.0" prefHeight="25.0" prefWidth="214.0" style="-fx-background-color: white;" />
+   </children>
+</AnchorPane>
