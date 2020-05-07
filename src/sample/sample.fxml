@@ -13,7 +13,7 @@
    <children>
       <ImageView fitHeight="650.0" fitWidth="1290.0" layoutX="-33.0" layoutY="-27.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../pictures/WhatsApp%20Image%202020-04-17%20at%2018.17.50.jpeg" />
+            <Image url="@../pictures/авторизация.jpeg" />
          </image>
       </ImageView>
       <Label fx:id="labelAuto" layoutX="504.0" layoutY="111.0" prefHeight="45.0" prefWidth="116.0" text="Autorization">

@@ -13,7 +13,7 @@ import javax.swing.*;
 import java.io.IOException;
 import java.sql.SQLException;
 
-public class RegistrationController  {
+public class RegistrationController extends Controll {
 
     @FXML
     private Button buttonBack;
@@ -94,11 +94,13 @@ public class RegistrationController  {
         });
 
         buttonBack.setOnAction(event -> {
-            change1(buttonBack, "sample");
+            buttonBack.getScene().getWindow().hide();
+            change2(buttonBack, "sample");
         });
     }
-    public void change1(Button button, String url) {
-        button.getScene().getWindow().hide();
+    @Override
+    public void change2(Button button, String url) {
+
         FXMLLoader loader  = new FXMLLoader();
         loader.setLocation(getClass().getResource("/sample/" + url + ".fxml"));
         try {
@@ -111,7 +113,6 @@ public class RegistrationController  {
         Stage stage = new Stage();
         stage.setScene(new Scene(root));
         stage.show();
-
     }
 }
 

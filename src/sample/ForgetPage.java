@@ -1,14 +1,19 @@
 package sample;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 import javax.swing.*;
+import java.io.IOException;
 import java.sql.SQLException;
 
-public class ForgetPage extends Controller{
+public class ForgetPage {
 
     @FXML
     private Label labelFpass;
@@ -46,16 +51,10 @@ public class ForgetPage extends Controller{
     @FXML
     private Button buttonFback;
 
-    @Override
-    public void change2(Button button, String url) {
-        super.change2(button, url);
-    }
-
     @FXML
     public void initialize() {
         buttonFback.setOnAction(event -> {
-            change2(buttonFback,"sample");
-            //System.exit(0);
+            buttonFback.getScene().getWindow().hide();
         });
         buttonFget.setOnAction(event -> {
             String g="";
@@ -63,7 +62,7 @@ public class ForgetPage extends Controller{
             DataBaseHeandler db=new DataBaseHeandler();
             try {
                 String a=db.getQuestion(g);//question
-                if(!g.equals("") && !a.equals("A")) {
+                if(!g.equals("") && !a.equals("Not faund")) {
                     textFque.setText(a);
                 }
                 else if(textFlog.getText().equals("")){

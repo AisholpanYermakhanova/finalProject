@@ -2,8 +2,9 @@ package sample;
 
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 
-public class DataBaseHeandler extends Controller{
+public class DataBaseHeandler {
     public static Connection connection;
     private static String url = "jdbc:mysql://localhost:3306/bd";
     private static String namee = "root", passs = "";
@@ -36,10 +37,10 @@ public class DataBaseHeandler extends Controller{
             pr.setString(2, item.getNamel());
             pr.setString(3, item.getDescription());
             pr.setDouble(4, item.getPrice());
-            pr.setString(5, item.getPicture());
-            pr.setInt(6, 3);
-
+            pr.setString(5, item.getMf());
+            pr.setString(6, item.getPicture());
             pr.executeUpdate();
+            pr.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -120,7 +121,7 @@ public class DataBaseHeandler extends Controller{
         connection = DriverManager.getConnection(url, namee, passs);
         Statement statement = connection.createStatement();
         ResultSet resultSet = statement.executeQuery("SELECT *from bd.users");
-        String q="A";
+        String q="Not found";
         int i=0;
         String a="";
         while (resultSet.next()) {
@@ -158,6 +159,19 @@ public class DataBaseHeandler extends Controller{
         else {
             return p;
         }
+    }
+    public static HashMap<Integer,String> getItems() throws ClassNotFoundException, SQLException {
+        HashMap<Integer,String> hashMap=new HashMap<>();
+        Class.forName("com.mysql.jdbc.Driver");
+        connection = DriverManager.getConnection(url, namee, passs);
+        Statement statement = connection.createStatement();
+        ResultSet resultSet = statement.executeQuery("SELECT *from bd.item");
+        while (resultSet.next()) {
+            Integer id = resultSet.getInt(1);
+            String  picture=resultSet.getString(7);
+            hashMap.put(id,picture);
+        }
+        return hashMap;
     }
 
 }

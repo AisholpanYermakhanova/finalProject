@@ -13,7 +13,7 @@
    <children>
       <ImageView fitHeight="506.0" fitWidth="381.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../pictures/7e24b4c7a56e49e2cb16ff474ad7b9e8.jpg" />
+            <Image url="@../pictures/фон2.jpg" />
          </image>
       </ImageView>
       <ListView fx:id="listviewAmoderator" layoutX="57.0" layoutY="64.0" prefHeight="366.0" prefWidth="280.0" />

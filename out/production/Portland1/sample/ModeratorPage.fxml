@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -13,7 +14,7 @@
    <children>
       <ImageView fitHeight="482.0" fitWidth="476.0" layoutX="174.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../pictures/2020.jpg_q50.jpg" />
+            <Image url="@../pictures/фон3.jpg" />
          </image>
       </ImageView>
       <AnchorPane prefHeight="476.0" prefWidth="298.0" style="-fx-background-color: #da6464;">
@@ -43,5 +44,9 @@
             <Font name="System Italic" size="25.0" />
          </font>
       </Label>
+      <ListView fx:id="listViewQ" layoutX="373.0" layoutY="111.0" prefHeight="265.0" prefWidth="229.0" />
+      <Label fx:id="labelList" layoutX="446.0" layoutY="93.0" style="-fx-background-color: white;" text="Users questions" />
+      <TextField fx:id="textlist" layoutX="387.0" layoutY="387.0" promptText="answer" />
+      <Button fx:id="buttonsend" layoutX="551.0" layoutY="387.0" mnemonicParsing="false" text="send" />
    </children>
 </AnchorPane>

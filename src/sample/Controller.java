@@ -16,7 +16,7 @@ import javafx.stage.Stage;
 
 import javax.swing.*;
 
-public class Controller {
+public class Controller extends Controll{
 
     @FXML
     private ResourceBundle resources;
@@ -48,8 +48,10 @@ public class Controller {
     @FXML
     void initialize() throws SQLException, ClassNotFoundException {
         buttonReg.setOnAction(event -> {
+            buttonReg.getScene().getWindow().hide();
             change2(buttonReg,"Registration");
         });
+
            buttonIn.setOnAction(event -> {
                String loginTT=textLogin.getText();
                String passwordD=textPass.getText();
@@ -81,13 +83,16 @@ public class Controller {
                    e.printStackTrace();
                }
                if(o==3){
-                   change2(buttonIn, "MainPage");
+                   change2(buttonIn, "MainPageShop"); // MainPageShop
+                   buttonIn.getScene().getWindow().hide();
                }
                else if(o==2){
                    change2(buttonIn,"ModeratorPage");
+                   buttonIn.getScene().getWindow().hide();
                }
                else if(o==1){
                    change2(buttonIn,"AdminPage");
+                   buttonIn.getScene().getWindow().hide();
                }
                else {
                    Shake logAn=new Shake(textLogin);
@@ -105,23 +110,8 @@ public class Controller {
                change2(buttonForget,"ForgetPage");
            });
     }
-
+    @Override
     public void change2(Button button, String url) {
-        button.getScene().getWindow().hide();
-        FXMLLoader loader  = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/sample/" + url + ".fxml"));
-        try {
-            loader.load();
-        }
-        catch (IOException e) {
-            e.printStackTrace();
-        }
-        Parent root = loader.getRoot();
-        Stage stage = new Stage();
-        stage.setScene(new Scene(root));
-        stage.show();
-    }
-    public void change1(Button button, String url) {
         FXMLLoader loader  = new FXMLLoader();
         loader.setLocation(getClass().getResource("/sample/" + url + ".fxml"));
         try {
@@ -136,4 +126,3 @@ public class Controller {
         stage.show();
     }
 }
-
