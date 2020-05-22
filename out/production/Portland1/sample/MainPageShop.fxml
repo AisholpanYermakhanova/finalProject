@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXToggleNode?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -13,46 +14,305 @@
 
 <AnchorPane prefHeight="618.0" prefWidth="1111.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainPageShop">
    <children>
-      <ImageView fitHeight="631.0" fitWidth="1111.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="tableItem" fitHeight="631.0" fitWidth="1111.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../pictures/фонМэйна1.jpeg" />
          </image>
       </ImageView>
-      <ImageView fx:id="imag" fitHeight="331.0" fitWidth="429.0" layoutX="298.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../pictures/item1.jpeg" />
-         </image>
-      </ImageView>
-      <Label fx:id="textItem" alignment="TOP_LEFT" layoutX="556.0" layoutY="152.0" prefHeight="331.0" prefWidth="258.0" style="-fx-background-color: white;">
-         <font>
-            <Font name="System Bold Italic" size="19.0" />
-         </font>
-      </Label>
-      <Button fx:id="buttonSwapL" layoutX="158.0" layoutY="276.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="47.0">
-         <graphic>
-            <FontAwesomeIcon glyphName="ARROW_LEFT" wrappingWidth="8.952367782592773" />
-         </graphic>
-      </Button>
-      <Button fx:id="buttonSwapR" layoutX="901.0" layoutY="276.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="47.0">
-         <graphic>
-            <FontAwesomeIcon glyphName="ARROW_RIGHT" wrappingWidth="8.952367782592773" />
-         </graphic>
-      </Button>
-      <JFXComboBox fx:id="combobox" focusColor="WHITE" layoutX="427.0" layoutY="49.0" unFocusColor="#320aff" />
       <JFXButton fx:id="buttonMPlogout" alignment="CENTER" buttonType="RAISED" layoutX="1017.0" layoutY="29.0" prefHeight="25.0" prefWidth="67.0" ripplerFill="#2806e5" style="-fx-background-color: white;" text="logout" textOverrun="CENTER_WORD_ELLIPSIS">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font>
       </JFXButton>
-      <JFXToggleNode fx:id="labelNoveleties" layoutX="483.0" layoutY="96.0" text="novelties" textFill="#ff1ca4">
+      <JFXToggleNode fx:id="labelNoveleties" layoutX="504.0" layoutY="14.0" text="Items" textFill="#ff1ca4">
          <font>
             <Font name="System Bold Italic" size="26.0" />
          </font>
       </JFXToggleNode>
-      <Button fx:id="buttonHelp" layoutX="51.0" layoutY="42.0" mnemonicParsing="false">
+      <Button fx:id="buttonHelp" layoutX="31.0" layoutY="30.0" mnemonicParsing="false">
          <graphic>
             <FontAwesomeIcon glyphName="QUESTION" />
          </graphic>
       </Button>
+      <TabPane layoutX="31.0" layoutY="81.0" prefHeight="512.0" prefWidth="1049.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="outerwear">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="230.0" fitWidth="182.0" layoutX="66.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@1/item4.jpeg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="256.0" layoutY="14.0" prefHeight="30.0" prefWidth="221.0" text="Star Wars plush T-shirt" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="246.0" layoutY="43.0" prefHeight="172.0" prefWidth="241.0" style="-fx-background-color: WHITE;" text="Colour: Grey. T-shirt straight from Star Wars universe" wrapText="true">
+                           <font>
+                              <Font name="System Italic" size="16.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="buttonBuy" layoutX="245.0" layoutY="215.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="243.0" style="-fx-background-color: RED;" text="buy" textFill="#f7f7f7">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="217.0" fitWidth="195.0" layoutX="71.0" layoutY="259.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@1/item7.jpeg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="246.0" layoutY="244.0" prefHeight="56.0" prefWidth="235.0" text="Star Wars pluPrinted hoodiesh" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="240.0" layoutY="281.0" prefHeight="172.0" prefWidth="241.0" style="-fx-background-color: WHITE;" text="Colour: Grey. T-shirt straight fromColour: White. White hoodie with symmetrical print Star Wars universe" wrapText="true">
+                           <font>
+                              <Font name="System Italic" size="16.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="buttonBuy1" layoutX="239.0" layoutY="446.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="243.0" style="-fx-background-color: RED;" text="buy" textFill="#f7f7f7">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="219.0" fitWidth="165.0" layoutX="595.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@1/item13.jpeg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="760.0" layoutY="13.0" prefHeight="32.0" prefWidth="297.0" text="Star Wars pluOversized short sleeve " textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="760.0" layoutY="49.0" prefHeight="161.0" prefWidth="241.0" style="-fx-background-color: WHITE;" text="Colour: Grey. T-shirt straight from Star Colour: Orange. Contrast Oversized T-sColour: Orange. Contrast Oversized T-shirt.hirt.Wars universe" wrapText="true">
+                           <font>
+                              <Font name="System Italic" size="16.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="buttonBuy2" layoutX="759.0" layoutY="210.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="243.0" style="-fx-background-color: RED;" text="buy" textFill="#f7f7f7">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="211.0" fitWidth="188.0" layoutX="595.0" layoutY="262.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@1/item14.jpeg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="760.0" layoutY="251.0" prefHeight="41.0" prefWidth="297.0" text="Star Wars pluOversizShort sleeve" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="760.0" layoutY="286.0" prefHeight="151.0" prefWidth="241.0" style="-fx-background-color: WHITE;" text="Colour: Green. Short sleeve T-shirt with a butterfly print and a round neckline. Featuring a standard fit; not too loose, yet not too tight." wrapText="true">
+                           <font>
+                              <Font name="System Italic" size="16.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="buttonBuy3" layoutX="759.0" layoutY="438.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="243.0" style="-fx-background-color: RED;" text="buy" textFill="#f7f7f7">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="price" layoutX="71.0" layoutY="221.0" text="9590 kzt" />
+                        <Label fx:id="price" layoutX="72.0" layoutY="459.0" text="13990 kzt" />
+                        <Label layoutX="595.0" layoutY="221.0" text="5590 kzt" />
+                        <Label fx:id="price" layoutX="595.0" layoutY="450.0" text="3590 kzt" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="trousers">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: GREY;">
+                     <children>
+                        <ImageView fitHeight="205.0" fitWidth="156.0" layoutX="61.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@1/item2.jpeg" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="218.0" layoutY="47.0" prefHeight="139.0" prefWidth="224.0" style="-fx-background-color: WHITE;" text="Straight fit trousers with two front pockets and two back pockets" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="System Italic" size="17.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="buttonBuy4" layoutX="217.0" layoutY="187.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="225.0" style="-fx-background-color: RED;" text="buy" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="13.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="206.0" fitWidth="156.0" layoutX="61.0" layoutY="255.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@1/item5.jpeg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="224.0" layoutY="20.0" prefHeight="28.0" prefWidth="211.0" text="Checked tailored trouser" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="224.0" layoutY="233.0" prefHeight="63.0" prefWidth="219.0" text="Checked tailSlim fit jeans with paint detailored trouser" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="218.0" layoutY="288.0" prefHeight="137.0" prefWidth="224.0" style="-fx-background-color: WHITE;" text="Straight fit trousers with two front pockets and Jeans with 5 pockets, belt loops and a slim fit. Front fastening with zip fly and metal buttontwo back pockets" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="System Italic" size="15.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="buttonBuy5" layoutX="217.0" layoutY="425.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="225.0" style="-fx-background-color: RED;" text="buy" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="13.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="199.0" fitWidth="176.0" layoutX="603.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@1/item9.jpeg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="764.0" layoutY="-8.0" prefHeight="56.0" prefWidth="211.0" text="Checked tailoChecked tailored trousersred trouser" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="757.0" layoutY="46.0" prefHeight="139.0" prefWidth="224.0" style="-fx-background-color: WHITE;" text="Straight fit trousers with two front pockeColour: Grey. Straight fit trousers with two front pockets and two back pockets. Featuring belt loops, a check print and zip fly and top button fastening.ts and two back pockets" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="System Italic" size="13.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="buttonBuy6" layoutX="758.0" layoutY="187.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="223.0" style="-fx-background-color: RED;" text="buy" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="13.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="202.0" fitWidth="160.0" layoutX="602.0" layoutY="255.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@1/item10.jpeg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="763.0" layoutY="258.0" prefHeight="28.0" prefWidth="211.0" text="Poplin jogging trousers" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="757.0" layoutY="285.0" prefHeight="139.0" prefWidth="224.0" style="-fx-background-color: WHITE;" text="Straight fit trousers with two front pockets and two back poColour: Sand. Plush joggers featuring an elastic waistband with adjustable drawstrings, snap buttons, two flap leg pockets, a slogan detail, contrast taping, a slightly loose fit and elasticated hems." textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="System Italic" size="13.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="buttonBuy7" layoutX="759.0" layoutY="425.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="222.0" style="-fx-background-color: RED;" text="buy" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="13.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="price" layoutX="61.0" layoutY="202.0" text="14990 kzt" />
+                        <Label fx:id="price" layoutX="61.0" layoutY="256.0" text="16990 kzt" />
+                        <Label fx:id="price" layoutX="603.0" layoutY="202.0" text="11990 kzt" />
+                        <Label fx:id="price" layoutX="603.0" layoutY="256.0" text="9900 kzt" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="footwear">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: PURPLE;">
+                     <children>
+                        <ImageView fitHeight="255.0" fitWidth="159.0" layoutX="61.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@1/item3.jpeg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="220.0" layoutY="14.0" text="Men’s topstitched trainers" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="217.0" layoutY="37.0" prefHeight="153.0" prefWidth="220.0" style="-fx-background-color: WHITE;" text="Black trainers with topstitching detail" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="System Italic" size="15.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="buttonBuy8" layoutX="220.0" layoutY="190.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="217.0" style="-fx-background-color: RED;" text="buy" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="13.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="214.0" fitWidth="160.0" layoutX="59.0" layoutY="262.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@1/item6.jpeg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="218.0" layoutY="230.0" prefHeight="63.0" prefWidth="221.0" text="Combined trainers with iridescent details" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="System Bold Italic" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="219.0" layoutY="285.0" prefHeight="153.0" prefWidth="220.0" style="-fx-background-color: WHITE;" text="Black trainers with topstiWhite mesh trainers with contrast pieces in pastel tones and iridescent detail on the heel." textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="System Italic" size="15.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="buttonBuy9" layoutX="221.0" layoutY="438.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="217.0" style="-fx-background-color: RED;" text="buy" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="13.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="205.0" fitWidth="361.0" layoutX="599.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@1/item12.jpeg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="759.0" layoutY="12.0" prefHeight="56.0" prefWidth="275.0" text="Men’s contrast trainers with piece detailing" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="System Bold Italic" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="759.0" layoutY="64.0" prefHeight="127.0" prefWidth="283.0" style="-fx-background-color: WHITE;" text="Black trainers wiColour: Multicolored. Contrast mesh trainers with multi-piece detailing in different colours.th topstitching detail" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="System Italic" size="15.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="buttonBuy10" layoutX="759.0" layoutY="190.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="283.0" style="-fx-background-color: RED;" text="buy" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="13.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="205.0" fitWidth="168.0" layoutX="599.0" layoutY="262.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@1/item18.jpeg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="759.0" layoutY="261.0" prefHeight="63.0" prefWidth="289.0" text="Combined trainers with iriTrainers with multicoloured contrastdescent details" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="759.0" layoutY="315.0" prefHeight="122.0" prefWidth="283.0" style="-fx-background-color: WHITE;" text="Black trainers with topstiWhite mesh trainers with contrast pieces in pastel tones and irideColour: Multicolored. Trainers in white. Contrast pastel colours on each foot. Technical piece on the sole.scent detail on the heel." textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="System Italic" size="15.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="buttonBuy11" layoutX="759.0" layoutY="438.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="285.0" style="-fx-background-color: RED;" text="buy" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="13.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="price" layoutX="71.0" layoutY="23.0" text="14990 kzt" />
+                        <Label fx:id="price" layoutX="71.0" layoutY="276.0" text="17990 kzt" />
+                        <Label fx:id="price" layoutX="606.0" layoutY="18.0" text="11990 kzt" />
+                        <Label fx:id="price" layoutX="606.0" layoutY="267.0" text="15990 kzt" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
    </children>
 </AnchorPane>

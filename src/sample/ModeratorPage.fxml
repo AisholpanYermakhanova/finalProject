@@ -2,7 +2,6 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -44,9 +43,10 @@
             <Font name="System Italic" size="25.0" />
          </font>
       </Label>
-      <ListView fx:id="listViewQ" layoutX="373.0" layoutY="111.0" prefHeight="265.0" prefWidth="229.0" />
-      <Label fx:id="labelList" layoutX="446.0" layoutY="93.0" style="-fx-background-color: white;" text="Users questions" />
-      <TextField fx:id="textlist" layoutX="387.0" layoutY="387.0" promptText="answer" />
-      <Button fx:id="buttonsend" layoutX="551.0" layoutY="387.0" mnemonicParsing="false" text="send" />
+      <Button fx:id="buttonBack" layoutX="299.0" layoutY="6.0" mnemonicParsing="false" text="logout">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

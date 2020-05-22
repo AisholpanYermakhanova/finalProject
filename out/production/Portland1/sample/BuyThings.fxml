@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="249.0" prefWidth="236.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.BuyThings">
+   <children>
+      <ImageView fitHeight="419.0" fitWidth="325.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../pictures/original.png" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="400.0" prefWidth="325.0">
+         <children>
+            <Label layoutX="65.0" layoutY="131.0" style="-fx-background-color: BLACK;" text="Enter your card number" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="19.0" />
+               </font>
+            </Label>
+            <TextField fx:id="labelCard" layoutX="34.0" layoutY="187.0" prefHeight="25.0" prefWidth="257.0" />
+            <JFXButton fx:id="buttonCanel" buttonType="RAISED" layoutX="137.0" layoutY="23.0" ripplerFill="#5f2ee5" style="-fx-background-color: GRAY;" text="cancel" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="buttonBuyy" layoutX="145.0" layoutY="245.0" ripplerFill="#ffd632" style="-fx-background-color: RED;" text="BUY" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

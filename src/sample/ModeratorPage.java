@@ -55,22 +55,6 @@ public class ModeratorPage extends Controll {
     private Button buttonBack;
 
     @FXML
-    private TableView<String> listViewM;
-
-    @FXML
-    public static ListView<String> listViewQ;
-
-    @FXML
-    private Label labelList;
-    //private ObservableList<String> observableList= FXCollections.observableArrayList();
-
-    @FXML
-    public static TextField textlist;
-
-    @FXML
-    public static Button buttonsend;
-
-    @FXML
     void initialize(){
         ArrayList<String> arrayList = new ArrayList<>();
         DataBaseHeandler data=new DataBaseHeandler();
